@@ -1,0 +1,24 @@
+v2.0 raw
+# to load this file into Logisim:
+# 1) redirect the output from the assembler to a file
+# 2) use the poke tool in Logisim and right-click the ROM component
+# 3) select Load Image menu option
+# 4) load the saved file
+1102	#5: li	r1, 2
+0900	#6: put	r1, r0
+1103	#7: li	r1, 3
+1203	#10: li	r2, 3
+1400	#13: li	r4, 0
+2C01	#14: add	r4, r1
+3402	#15: sub	r4, r2
+D40F	#16: bez	r4, is_prime
+1300	#18: li	r3, 0
+2B01	#19: add	r3, r1
+3302	#22: sub	r3, r2
+D310	#23: bez	r3, is_not_prime
+BB0A	#24: bgz	r3, divide_loop
+6A02	#25: adi	r2, 2
+A004	#26: j	divisor_loop
+0900	#29: put	r1, r0
+6902	#31: adi	r1, 2
+A003	#32: j	prime_loop

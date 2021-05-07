@@ -1,0 +1,21 @@
+v2.0 raw
+# to load this file into Logisim:
+# 1) redirect the output from the assembler to a file
+# 2) use the poke tool in Logisim and right-click the ROM component
+# 3) select Load Image menu option
+# 4) load the saved file
+1101	#1: li	r1, 1
+1202	#2: li	r2, 2
+1305	#4: li	r3, 5
+2300	#5: st	r3, r0
+1306	#6: li	r3, 6
+2301	#7: st	r3, r1
+1307	#8: li	r3, 7
+2302	#9: st	r3, r2
+1C00	#11: ld	r4, r0
+1D01	#12: ld	r5, r1
+1E02	#13: ld	r6, r2
+0C00	#15: put	r4, r0
+0D00	#16: put	r5, r0
+0E00	#17: put	r6, r0
+0000	#18: halt

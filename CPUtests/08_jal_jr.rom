@@ -1,0 +1,15 @@
+v2.0 raw
+# to load this file into Logisim:
+# 1) redirect the output from the assembler to a file
+# 2) use the poke tool in Logisim and right-click the ROM component
+# 3) select Load Image menu option
+# 4) load the saved file
+B706	#1: jal	r7, f1
+B703	#2: jal	r7, f2
+0000	#3: halt
+119F	#6: li	r1, 0x9f
+0900	#7: put	r1, r0
+AF00	#8: jr	r7
+1154	#11: li	r1, 0x54
+0900	#12: put	r1, r0
+AF00	#13: jr	r7
